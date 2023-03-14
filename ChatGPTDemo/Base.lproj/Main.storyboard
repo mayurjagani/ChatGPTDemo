@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0Rb-zc-TZ0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="QNh-rT-Kuy">
+            <objects>
+                <viewController id="0Rb-zc-TZ0" customClass="APChatViewController" customModule="ChatGPTDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wLW-WH-HI4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_bg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dlp-1U-aGn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <color key="tintColor" red="0.0" green="0.82495653629999999" blue="0.2149893343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PrC-kA-KoV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNt-WQ-zda">
+                                        <rect key="frame" x="358" y="8" width="48" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="5qF-hQ-KDz"/>
+                                            <constraint firstAttribute="width" constant="48" id="m2B-fH-U3r"/>
+                                        </constraints>
+                                        <color key="tintColor" name="label"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="filemenu.and.cursorarrow" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="semibold"/>
+                                        </state>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="SY9-6e-L6p">
+                                        <rect key="frame" x="14" y="8" width="52" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="IeB-zc-ld9"/>
+                                            <constraint firstAttribute="height" constant="52" id="wJR-1E-XuJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat GPT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0C-PS-BL0">
+                                        <rect key="frame" x="74" y="8" width="80" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFT-93-2UW">
+                                        <rect key="frame" x="74" y="32" width="47" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" name="label"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dNt-WQ-zda" secondAttribute="bottom" constant="4" id="4E5-os-yvv"/>
+                                    <constraint firstAttribute="trailing" secondItem="dNt-WQ-zda" secondAttribute="trailing" constant="8" id="4Wb-tL-pWR"/>
+                                    <constraint firstAttribute="bottom" secondItem="SY9-6e-L6p" secondAttribute="bottom" id="GyD-yG-Mxq"/>
+                                    <constraint firstAttribute="height" constant="60" id="Wer-QO-NFP"/>
+                                    <constraint firstAttribute="bottom" secondItem="dFT-93-2UW" secondAttribute="bottom" constant="8" id="dS1-rO-xhN"/>
+                                    <constraint firstItem="H0C-PS-BL0" firstAttribute="leading" secondItem="SY9-6e-L6p" secondAttribute="trailing" constant="8" symbolic="YES" id="iYM-kp-Tro"/>
+                                    <constraint firstItem="dFT-93-2UW" firstAttribute="top" secondItem="H0C-PS-BL0" secondAttribute="bottom" constant="2" id="kD3-nW-H8g"/>
+                                    <constraint firstItem="SY9-6e-L6p" firstAttribute="leading" secondItem="PrC-kA-KoV" secondAttribute="leading" constant="14" id="opj-qu-zBA"/>
+                                    <constraint firstItem="dFT-93-2UW" firstAttribute="leading" secondItem="SY9-6e-L6p" secondAttribute="trailing" constant="8" symbolic="YES" id="tUP-ic-7NM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oeQ-ZM-qvt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dlp-1U-aGn" firstAttribute="trailing" secondItem="oeQ-ZM-qvt" secondAttribute="trailing" id="6eb-yw-RR0"/>
+                            <constraint firstItem="Dlp-1U-aGn" firstAttribute="bottom" secondItem="oeQ-ZM-qvt" secondAttribute="bottom" id="JpN-Vj-Kqn"/>
+                            <constraint firstItem="Dlp-1U-aGn" firstAttribute="leading" secondItem="oeQ-ZM-qvt" secondAttribute="leading" id="O8S-fh-a80"/>
+                            <constraint firstItem="PrC-kA-KoV" firstAttribute="leading" secondItem="oeQ-ZM-qvt" secondAttribute="leading" id="c5V-UG-DPA"/>
+                            <constraint firstItem="PrC-kA-KoV" firstAttribute="top" secondItem="oeQ-ZM-qvt" secondAttribute="top" id="h2l-8s-Awg"/>
+                            <constraint firstItem="Dlp-1U-aGn" firstAttribute="top" secondItem="wLW-WH-HI4" secondAttribute="top" id="lwo-7U-r9b"/>
+                            <constraint firstItem="PrC-kA-KoV" firstAttribute="trailing" secondItem="oeQ-ZM-qvt" secondAttribute="trailing" id="yBT-ga-U3n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mJ3-GY-mXj"/>
+                    <connections>
+                        <outlet property="navBarView" destination="PrC-kA-KoV" id="xi1-3L-YYZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="niJ-gp-zQ7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="102"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat_bg" width="1125" height="1651.5"/>
+        <image name="filemenu.and.cursorarrow" catalog="system" width="128" height="96"/>
+        <image name="profile" width="256" height="256"/>
+        <namedColor name="label">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
